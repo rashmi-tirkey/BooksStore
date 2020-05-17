@@ -1,0 +1,19 @@
+@import './mixing.scss';
+
+.container-fluid{
+    padding: 0;
+    margin: 0;
+}
+.section-head{
+    padding: 10px;
+}
+.basic-button{
+    color: #2874f0;
+    font-weight: 500;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    height: 32px;
+    padding: 5px 40px;
+    border: 1px solid #dbdbdb;
+}
