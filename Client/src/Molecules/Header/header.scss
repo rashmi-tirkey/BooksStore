@@ -1,0 +1,70 @@
+@import "./../../Assets/BasicStyle/base.scss";
+
+.header-wrapper {
+    background-color: dodgerblue;
+    color: #ffffff;
+
+    .mobile-only {
+        @include mobile {
+            display: block;
+        }
+        @include tablet {
+            display: block;
+        }
+        @include desktopsmall {
+            display: none;
+        }
+        .upper-mobile-header {
+            display: flex;
+            padding-bottom: 10px;
+            .logo {
+                flex: 7;
+                font-family: cursive;
+            }
+            .cart {
+                flex: 1;
+            }
+            .login {
+                flex: 1;
+                font-family: cursive;
+            }
+        }
+    }
+    .desktop-only {
+        @include mobile {
+            display: none;
+        }
+        @include tablet {
+            display: none;
+        }
+        @include desktopsmall {
+            display: block;
+        }
+
+        .desktop-hear-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 15px;
+            .logo {
+                flex: 1;
+                text-align: right;
+                padding-right: 16px;
+            }
+            .search-box {
+                flex-basis: 50%;
+            }
+            .login {
+                flex: 1;
+                text-align: right;
+                padding-right: 25px;
+            }
+            .more {
+                flex-basis: 10%;
+            }
+            .fa-shopping-cart {
+                flex: 1;
+            }
+        }
+    }
+}
