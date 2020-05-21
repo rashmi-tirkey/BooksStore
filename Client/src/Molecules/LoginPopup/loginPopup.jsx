@@ -43,7 +43,8 @@ export default class LoginPopup extends Component {
                                 <div className="password user-input">
                                 <BasicTextFields type="password" name="password" label="Enter Password" functionName={(e) => this.formData(e)}/>
                                 </div>
-                                <BasicLoginButton type="button" classNameValue="login-btn" name="login" onClickFuntion={this.loginForm} text="Login"/> 
+                                <BasicLoginButton type="button" classNameValue="login-btn" name="login" onClickFuntion={this.loginForm} text="Login"/>
+                                <a href="">New to Flipkart? Create an account</a> 
                             </div> 
                         </div>
                     </Modal.Body>
