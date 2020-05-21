@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import WebsiteLogo from './../../Atoms/WebsiteLogo/websitelogo'
 import BasicSearchBox from './../../Atoms/SearchBoxInput/searchBox'
-import LoginPopup from './../LoginPopup/loginPopup'
+import Popup from './../PopUp/popup.jsx';
+
 import './header.scss'
+
 export default class Header extends Component {
     constructor(props){
         super(props);
@@ -36,7 +38,7 @@ export default class Header extends Component {
                     </div>
 
                 </div>
-                <LoginPopup show={this.state.show} handleModal={this.handleModal}/>
+                <Popup show={this.state.show} handleModal={this.handleModal}/>
             </div>
         )
     }
