@@ -35,7 +35,7 @@ export default class Popup extends Component {
                     <Modal.Header closeButton></Modal.Header>
                     <Modal.Body>
                         <PopUpRight rightHeader={rightHeader} RightText={RightText} />
-                        {isLogin ?<LoginPopup />:<RegisterPopup/>}
+                        {isLogin ?<LoginPopup loginFunction={this.props.loginFunction} handleModal={this.props.handleModal}/>:<RegisterPopup/>}
                         <p onClick={this.toggleLogAndSignup}>{userType}</p>
                     </Modal.Body>
                     <Modal.Footer>

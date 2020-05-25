@@ -1,10 +1,16 @@
 body {
-    .popup-wrapper {
-        .fade.modal-content.modal.show {
+     .fade.modal-content.modal.show {
             background-color: royalblue;
             .modal-dialog {
                 background-color: red;
+                border:none;
+                .modal-header{
+                    border-bottom:none;
+                    .modal-footer{
+                        border-top:none;
+                    }
+                }
             }
         }
-    }
+    
 }
