@@ -1,0 +1,18 @@
+.card-wrapper{
+    .card-details{
+        .card-image{
+            height: 280px;
+            width: 210px;
+            margin: 0 auto 20px;
+            img {
+                height: 100%;
+                width: 100%;
+                transition: transform 1s;
+            }
+
+            img:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}

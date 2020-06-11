@@ -1,4 +1,46 @@
 @import './../../Assets/BasicStyle/base.scss';
 .home-wrapper{
-  
+    margin-top: 20px;
+    .catagory-name{
+        display:flex;
+        div{
+            flex:0.1;
+            margin-left: 50px;
+            text-align: center;
+            img {
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+              }
+        }
+    }
+    .side-wrapper-left {
+        margin-top: 20px;
+        width: 20%;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+        margin-right: 5px;
+        height: 400px;
+        text-align: center;
+        padding-top: 40px;
+        font-weight: bold;
+        text-decoration: underline;
+        
+    }
+     .book-card-container{
+        width: 80%;
+        float: right;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+        
+        .card-wrapper{
+            padding: 10px;
+            margin: 10px;
+            width: 29%;
+
+        }
+        
+    }
 }

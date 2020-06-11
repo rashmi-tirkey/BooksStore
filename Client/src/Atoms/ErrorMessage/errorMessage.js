@@ -1,7 +1,6 @@
 import React  from 'react'
-
+import './errorMessage.scss'
 const ErrorMessage = ({text}) =>{
-    //console.log("text");
     return <div className="error-wrapper" >
         {text}
     </div>;

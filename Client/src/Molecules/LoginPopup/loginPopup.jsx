@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button, Modal } from 'react-bootstrap'
 import BasicTextFields from './../../Atoms/InputField/basicInputField'
 import BasicLoginButton from './../../Atoms/loginButton/loginButton'
+import ErrorMessage from './../../Atoms/ErrorMessage/errorMessage'
 import userdata from './../../Constant/user.json'
 import './loginPopup.scss'
 export default class LoginPopup extends Component {
@@ -10,12 +11,12 @@ export default class LoginPopup extends Component {
         this.state={
            email:"",
            password:"",
-           message:"",
+           message:"please enter valid email or password",
            isUser:false
         }
     }
     formData =(data)=>{
-		 this.setState({ [data.target.name]: data.target.value });
+		 this.setState({ [data.target.name]: data.target.value, isUser:false });
     }
     loginForm=()=>{
        if(this.state.email===userdata.username && this.state.password===userdata.password){
@@ -23,7 +24,7 @@ export default class LoginPopup extends Component {
            this.props.handleModal()
            localStorage.setItem("token", "123xyz")
        }else{
-            this.setState({message:"!please enter valid email or password"})
+            this.setState({isUser:true})
        }
     }
     render() {
@@ -32,7 +33,7 @@ export default class LoginPopup extends Component {
                 <div className="second-div dice">
                     <div className="username user-input">
                         <BasicTextFields type="text" name="email" label="Username" functionName={(e) => this.formData(e)}/>
-                            {this.state.message}
+                            {this.state.isUser?<ErrorMessage text={this.state.message}/>:""}
                     </div>
                     <div className="password user-input">
                         <BasicTextFields type="password" name="password" label="Password" functionName={(e) => this.formData(e)} />

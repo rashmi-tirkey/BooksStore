@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button, Modal } from 'react-bootstrap'
 import BasicTextFields from '../../Atoms/InputField/basicInputField'
 import BasicLoginButton from '../../Atoms/loginButton/loginButton'
+import ErrorMessage from './../../Atoms/ErrorMessage/errorMessage'
 import LoginPopup from './../LoginPopup/loginPopup'
 import './registerPopup.scss';
 export default class RegisterPopup extends Component {
@@ -62,19 +63,19 @@ export default class RegisterPopup extends Component {
                     <div className="main-input">
                         <div className="name user-input">
                             <BasicTextFields type="text" name="name" label="Name" functionName={this.formData} />
-                            {this.state.isNameValid?"":this.state.errorNameMessage}
+                            {this.state.isNameValid?"":<ErrorMessage text={this.state.errorNameMessage}/>}
                         </div>
                         <div className="username user-input">
                             <BasicTextFields type="text" name="email" label="Username" functionName={this.formData} />
-                            {this.state.isEmailValid?"":this.state.errorEmailMessage}
+                            {this.state.isEmailValid?"":<ErrorMessage text={this.state.errorEmailMessage}/>}
                         </div>
                         <div className="password user-input">
                             <BasicTextFields type="password" name="password" label="Password" functionName={(e) => this.formData(e)}/>
-                            {this.state.isPasswordValid?"":this.state.errorPasswordMessage}
+                            {this.state.isPasswordValid?"":<ErrorMessage text={this.state.errorPasswordMessage}/>}
                         </div>
                         <div className="cnfpassword user-input">
                             <BasicTextFields type="password" name="cnfpassword" label="Confirm Password" functionName={(e) => this.formData(e)}/>
-                            {this.state.isPasswordMatch?"":this.state.errorPasswordMatch}
+                            {this.state.isPasswordMatch?"":<ErrorMessage text={this.state.errorPasswordMatch}/>}
                         </div>
                         <BasicLoginButton type="button" classNameValue="login-btn" name="register" onClickFuntion={this.registerForm} text="CONTINUE"/>
                     </div>:
